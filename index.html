@@ -1,0 +1,687 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    -->
+    <title>我的第一个页面</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        ol,
+        ul,
+        li,
+        dl,
+        dd,
+        p,
+        dt {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*banner*/
+        .banner {
+            position: relative;
+            height: 415px;
+            overflow: hidden;
+            background: url(../images/loading.gif) 50% no-repeat;
+        }
+
+        .slides {
+            position: relative;
+            z-index: 1;
+        }
+
+        .slides li {
+            height: 415px;
+        }
+
+        .flex-control-nav {
+            position: absolute;
+            bottom: 10px;
+            z-index: 2;
+            width: 100%;
+            text-align: center;
+        }
+
+        .flex-control-nav li {
+            display: inline-block;
+            width: 50px;
+            height: 3px;
+            margin: 0 5px;
+            *display: inline;
+            zoom: 1;
+        }
+
+        .flex-control-nav a {
+            display: inline-block;
+            width: 50px;
+            height: 3px;
+            overflow: hidden;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .flex-control-nav .flex-active {
+            background: #ff8400;
+        }
+
+        .ebanner {
+            height: 340px;
+            overflow: hidden;
+            border-bottom: 3px solid #045eb3;
+        }
+
+        .ebanner img {
+            width: 100%;
+            height: 340px;
+        }
+
+        .prod {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid #CCC;
+        }
+
+        .rigthImg {
+            float: left;
+            width: 256px;
+            height: 195px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rigthImg img {
+            width: inherit;
+            height: 190px;
+            position: relative;
+        }
+
+        .prodContnet img {
+            transform: scale(1);
+            transition: all ease-in-out 0.3s;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            -moz-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
+            -ms-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
+        }
+
+        .prodContnet img:hover {
+            transform: scale(1.1);
+            transition: all ease-in-out 0.3s;
+            /* -webkit-transform: scale(1.1); 
+			 -webkit-transition: all ease-in-out .3s;  */
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            transform: scale(1.1);
+            -webkit-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
+            -ms-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
+
+        }
+
+        .prodContnet .rightContent a {
+            width: 262px;
+        }
+
+        .zhanshi {
+            font-size: 25px;
+            width: 1200px;
+            margin: 0 auto;
+            color: darkgray;
+            padding-top: 46px;
+
+            /* width: fit-content; */
+        }
+
+        .zhanshi span {
+            border-bottom: 2px solid #666;
+        }
+
+        .anlizhanshi img {
+            width: 232px;
+            height: 271px;
+        }
+
+        .zhanshi_item {
+            padding: 10px;
+        }
+
+        .zhanshi_item_text {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .anlishuoming:hover {
+            display: block;
+        }
+
+        /* new */
+        .width {
+            width: 1200px;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+
+        .More {
+            border-radius: 15px;
+            border: 1px solid #999;
+            text-align: center;
+            height: 26px;
+            line-height: 26px;
+            margin-top: 34px;
+            font-size: 12px;
+            background: #fff;
+            padding: 0 18px;
+
+        }
+        .More a{
+            text-decoration: none;
+            color: #666666;
+        }
+
+        .AnLiTitle {
+            border-bottom: 1px solid #034a8c;
+            height: 48PX;
+            line-height: 48px;
+            font-size: 17px;
+            color: #333333;
+            padding: 0px 10px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .ZhiNengBg {
+            background: #e8e8e8;
+            min-width: 1200px;
+            margin-top: 40px;
+            padding: 10px 0px 40px 0px;
+            overflow: hidden;
+        }
+
+        .ZhiN_L {
+            width: 800px;
+            overflow: hidden;
+            float: left;
+            margin-top: 20px
+        }
+
+        .DgB {
+            width: 800px;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .DgImg {
+            width: 400px;
+            height: 220px;
+            overflow: hidden
+        }
+
+        .DgFont {
+            width: 340px;
+            height: 160px;
+            background: #e8e8e8;
+            color: #838383;
+            padding: 30px;
+            line-height: 20px;
+            position: relative;
+        }
+
+        .DgFont h2 {
+            font-size: 15px;
+            padding-bottom: 15px;
+            color: #333;
+            margin: 0;
+        }
+        .AnLiT_Line {
+  border-bottom: 1px solid #dcdcdc;
+  height: 48PX;
+  line-height: 48px;
+  margin-top: 20px;
+}
+
+        .DgFont h2:after {
+            content: " ";
+            border-bottom: 2px solid #034a8c;
+            width: 20px;
+            display: block;
+            padding-bottom: 5px
+        }
+
+        .DgFont span {
+            display: block;
+            width: 85px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #034a8c;
+            border-radius: 3px;
+            color: #034a8c;
+            margin-top: 10px
+        }
+
+        .DgFont a {
+            display: block;
+            color: #666666;
+            font-size: 12px;
+            text-decoration: none;
+            line-height: 24px;
+        }
+
+        .DgFont p {
+            height: 72px;
+            overflow: hidden;
+            line-height: 24px;
+        }
+
+        .DgFont:hover span {
+            border: 1px solid #034a8c;
+            background: #034a8c;
+            color: #FFF
+        }
+
+        .DgSj {
+            position: absolute;
+            left: -7px
+        }
+
+        .DgSj01 {
+            position: absolute;
+            right: -7px
+        }
+
+        .DgSj02 {
+            position: absolute;
+            top: -14px
+        }
+
+        .ZhiN_R {
+            width: 400px;
+            overflow: hidden;
+            margin-top: 20px
+        }
+        /*荣誉资质*/
+.JieJueList{ width:1213px; margin-top:20px;padding-bottom: 20px;}
+.JieJueList a{
+    text-decoration: none;
+}
+.JieJueList ul{
+    overflow: hidden;
+}
+.JieJueList li{ float:left; width:290px; margin-right:13px; }
+.JieJueImg{ width:290px; height:170px;}
+.JieJueFont{ height:76px; background:#f4f4f4; padding:5px 15px;overflow:hidden;}
+.JieJueFont h2{ font-size:15px; color:#000000;margin: 5px ;}
+.JieJueFont{
+    color: #666666;
+    font-size: 12px;
+    text-decoration: none;
+}
+.JieJueFont:hover,.JieJueFont:hover h2{ background:#333333; color:#FFF}
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".anlizhanshi_td").hover(
+                function () {
+                    //$(".anlishuoming").show()
+                    $(".anlishuoming").css("display", "block");
+                },
+                function () {
+                    //$(".anlishuoming").hide();
+                    $(".anlishuoming").css("display", "none");
+                });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- 页面的top -->
+    <div style="height:120px; background-color:#034A8C;">
+        <!-- top 左边 -->
+        <div style="float:left; width:35%;">
+            <img src="imgs/logo.png" style="float:right; padding-top:20px;" />
+        </div>
+        <!-- top 右边 -->
+        <div style="float:left; width:65%;">
+            <!-- top 右边 上面 -->
+            <div style="width:100%; text-align:right; padding-top:10px;">
+                <span style="color:#FFF;">搜索</span>
+                <input type="text" />
+                <input type="button" value="提交" style=" margin-right:150px;" />
+            </div>
+            <!-- top 右边 下面 -->
+            <div style="width:100%; padding-top:30px; padding-left:100px; font-size:18px; color: #FFF;">
+                <a href="#">首页</a>
+                <a href="#">关于我们</a>
+                <a href="#">产品展示</a>
+                <a href="#">新闻中心</a>
+                <a href="#">成功案例</a>
+                <a href="#">人才招聘</a>
+                <a href="#">客户留言</a>
+                <a href="#">联系我们</a>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 轮播图banner -->
+    <div class="banner">
+        <ul class="slides">
+            <li style="background:url(imgs/banner/1.jpg)  50% 0 no-repeat;"> </li>
+            <li style="background:url(imgs/banner/2.jpg)  50% 0 no-repeat;"> </li>
+        </ul>
+    </div>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script>
+        $(function () {
+            $('.banner').flexslider({
+                directionNav: true,
+                pauseOnAction: false
+            });
+        });
+    </script>
+
+    <!-- 产品展示 -->
+    <div class="prod">
+        <div class="zhanshi">
+            <span>产品展示</span>
+        </div>
+    </div>
+    <div class="prodContnet" style="width:100%; margin:0 auto; padding-top:20px;height:390px;">
+        <div style="width:1200px;margin: 0 auto;overflow: hidden;">
+            <!-- 左边 -->
+            <div style="width:400px; float:left; height:390px; overflow:hidden;">
+                <a href="#">
+                    <img style="width:inherit; height: inherit;" src="imgs/prod/1.jpg" />
+                </a>
+            </div>
+            <!-- 右边 -->
+            <div class="rightContent" style="width:800px; float:left; height:390px;">
+                <div class="rigthImg">
+                    <a href="#">
+                        <img src="imgs/prod/1.jpg" />
+                    </a>
+                </div>
+                <div class="rigthImg">
+                    <img src="imgs/prod/2.jpg" />
+                </div>
+                <div class="rigthImg">
+                    <img src="imgs/prod/3.jpg" />
+                </div>
+                <div class="rigthImg">
+                    <img src="imgs/prod/4.jpg" />
+                </div>
+                <div class="rigthImg">
+                    <img src="imgs/prod/5.jpg" />
+                </div>
+                <div class="rigthImg">
+                    <img src="imgs/prod/6.jpg" />
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- 第四部分  -->
+    <div style="width:100%; background-color:#E8E8E8; height:150px; margin-top:30px; ">
+        <table style="width:1350px; margin:0 auto;">
+            <tr>
+                <td>
+                    <i
+                        style="background: url(imgs/icon04.png) no-repeat; width:77px; height:77px;display:block; float:left; margin-top:36px;"></i>
+                    <span style="width:320px; float:left; padding:15px 20px 0px 20px;">
+                        <h4>私人制定最合理的解决方案</h4>
+                        <p style="color: gray;"><small>专业咨询服务人员，科学合理沟通；免费上门测量，现场勘查，专家评估；定制专属家庭影院施工方案。</small></p>
+                    </span>
+                </td>
+                <td>
+                    <i
+                        style="background: url(imgs/icon05.png) no-repeat; width:77px; height:77px;display:block; float:left; margin-top:36px;"></i>
+                    <span style="width:320px; float:left; padding:15px 20px 0px 20px;">
+                        <h4>专业施工，声学专家调试</h4>
+                        <p style="color: gray;"><small>嵌入式、隐藏式施工为主，不影响整体家装美观度；声学专家现场调试，确保真实三维声像均衡充满空间。</small></p>
+                    </span>
+                </td>
+                <td>
+                    <i
+                        style="background: url(imgs/icon06.png) no-repeat; width:77px; height:77px;display:block; float:left; margin-top:36px;"></i>
+                    <span style="width:320px; float:left; padding:15px 20px 0px 20px;">
+                        <h4>全国各地服务商，门对门服务</h4>
+                        <p style="color: gray;"><small>一年包换，终身保修；24小时贴心服务；定时回访，只为让您更满意</small></p>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 案例展示 -->
+    <div class="prod">
+        <div class="zhanshi">
+            <span>案例展示</span>
+        </div>
+    </div>
+    <style>
+        .anlizhanshi td {
+            width: 250px;
+            height: 350px;
+            position: relative;
+        }
+
+        .anlizhanshi_td {
+            top: 0;
+        }
+
+        .anlishuoming {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+    <div class="anlizhanshi" style="width:100%; padding-top:30px;">
+        <table style="margin:0 auto;">
+            <tr>
+                <td>
+                    <div class="anlizhanshi_td" style="z-index:1; position:absolute;">
+                        <div class="zhanshi_item">
+                            <img src="imgs/prod/1.jpg" />
+                        </div>
+                        <div class="zhanshi_item_text">
+                            <div style="color:#666; font-weight:bolder;">01</div>
+                            <span style="">定制型家庭影院</span>
+                        </div>
+                    </div>
+                    <div class="anlishuoming"
+                        style="display: none; z-index:2; position:absolute;  width:200px; height:200px; text-align:center; color:#FFF; margin:10px;">
+                        <h2>01</h2>
+                        <h3>定制型家庭影院</h3>
+                        <p>家庭影院概括来说可以从综合两个概念去了解，这两个概念分别为“家庭影院标准”和“家庭环境中播放电影片中的播放系统”。 家庭影院市场又添一军： 目前的微型投影仪家庭影院 </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="anlizhanshi_td" style="z-index:1; position:absolute;">
+                        <div class="zhanshi_item">
+                            <img src="imgs/prod/2.jpg" />
+                        </div>
+                        <div class="zhanshi_item_text">
+                            <div style="color:#666; font-weight:bolder;">02</div>
+                            <span style="">定制型家庭影院</span>
+                        </div>
+                    </div>
+                    <div class="anlishuoming"
+                        style="display: none; z-index:2; position:absolute;  width:200px; height:200px; text-align:center; color:#FFF; margin:10px;">
+                        <h2>02</h2>
+                        <h3>定制型家庭影院</h3>
+                        <p>家庭影院概括来说可以从综合两个概念去了解，这两个概念分别为“家庭影院标准”和“家庭环境中播放电影片中的播放系统”。 家庭影院市场又添一军： 目前的微型投影仪家庭影院 </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="anlizhanshi_td" style="z-index:1; position:absolute;">
+                        <div class="zhanshi_item">
+                            <img src="imgs/prod/3.jpg" />
+                        </div>
+                        <div class="zhanshi_item_text">
+                            <div style="color:#666; font-weight:bolder;">03</div>
+                            <span style="">定制型家庭影院</span>
+                        </div>
+                    </div>
+                    <div class="anlishuoming"
+                        style="display: none; z-index:2; position:absolute;  width:200px; height:200px; text-align:center; color:#FFF; margin:10px;">
+                        <h2>03</h2>
+                        <h3>定制型家庭影院</h3>
+                        <p>家庭影院概括来说可以从综合两个概念去了解，这两个概念分别为“家庭影院标准”和“家庭环境中播放电影片中的播放系统”。 家庭影院市场又添一军： 目前的微型投影仪家庭影院 </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="anlizhanshi_td" style="z-index:1; position:absolute;">
+                        <div class="zhanshi_item">
+                            <img src="imgs/prod/4.jpg" />
+                        </div>
+                        <div class="zhanshi_item_text">
+                            <div style="color:#666; font-weight:bolder;">04</div>
+                            <span style="">定制型家庭影院</span>
+                        </div>
+                    </div>
+                    <div class="anlishuoming"
+                        style="display: none; z-index:2; position:absolute;  width:200px; height:200px; text-align:center; color:#FFF; margin:10px;">
+                        <h2>04</h2>
+                        <h3>定制型家庭影院</h3>
+                        <p>家庭影院概括来说可以从综合两个概念去了解，这两个概念分别为“家庭影院标准”和“家庭环境中播放电影片中的播放系统”。 家庭影院市场又添一军： 目前的微型投影仪家庭影院 </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="anlizhanshi_td" style="z-index:1; position:absolute;">
+                        <div class="zhanshi_item">
+                            <img src="imgs/prod/5.jpg" />
+                        </div>
+                        <div class="zhanshi_item_text">
+                            <div style="color:#666; font-weight:bolder;">05</div>
+                            <span style="">定制型家庭影院</span>
+                        </div>
+                    </div>
+                    <div class="anlishuoming"
+                        style="display: none; z-index:2; position:absolute;  width:200px; height:200px; text-align:center; color:#FFF; margin:10px;">
+                        <h2>05</h2>
+                        <h3>定制型家庭影院</h3>
+                        <p>家庭影院概括来说可以从综合两个概念去了解，这两个概念分别为“家庭影院标准”和“家庭环境中播放电影片中的播放系统”。 家庭影院市场又添一军： 目前的微型投影仪家庭影院 </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--客户见证-->
+    <div class="ZhiNengBg">
+        <div class="AnLiT_Line">
+            <div class="width">
+                <DIV class="AnLiTitle fl">客户见证</DIV>
+                <div class="More fr"><a href="">更多<i>>></i></a></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="width">
+            <div class="ZhiN_L fl">
+                <div class="DgB">
+                    <div class="DgImg fl"><a href=""><img src="imgs/prod/a1.jpg" width="400" height="220"></a></div>
+                    <div class="DgFont fr">
+                        <div class="DgSj"><img src="images/icon09.png" width="7" height="13"></div>
+                        <a href="">
+                            <h2>楼阁家庭影院</h2>
+                            <p>据我们的要求的打造高端、舒适、高品质的私人家庭影音室，经过工作人员设计、安装、反复测试之后已完美交付!</p>
+                            <span>查看详情 <i>></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="DgB">
+                    <div class="DgFont fl">
+                        <div class="DgSj01"><img src="images/icon10.png" width="7" height="13"></div>
+                        <a href="Znjj/40">
+                            <h2>私人影院</h2>
+                            <p>私人影院，观众可以按影片类型、流行程度等不同标准进行分类查找，选到中意影片后只要按一下按钮，电脑就会自动“下单”，然后您就可以带上零食，在包厢里坐等电影开映了，一个包厢少至1人，多至8人，窝在小包厢大皮椅里，点播电影。
+                            </p>
+                            <span>查看详情 <i>></i></span>
+                        </a>
+                    </div>
+                    <div class="DgImg fr"><a href=""><img src="imgs/prod/a2.jpg" width="400" height="220"></a></div>
+                </div>
+            </div>
+            <div class="ZhiN_R fr ">
+                <div class="DgImg"><a href=""><img src="imgs/prod/a3.jpg" width="400" height="220"></a></div>
+                <div class="DgFont fl">
+                    <div class="DgSj02"><img src="images/icon11.png" width="13" height="7"></div>
+                    <a href="">
+                        <h2>经典家庭影院</h2>
+                        <p>家庭影院概括来说可以从综合两个概念去了解，这两个概念分别为“家庭影院标准”和“家庭环境中播放电影片中的播放系统”。 </p>
+                        <span>查看详情 <i>></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--解决方案-->
+<div class="AnLiT_Line">
+    <div class="width">
+      <DIV class="AnLiTitle fl">荣誉资质</DIV>
+      <div class="More fr"><a href="">更多<i>>></i></a></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="width">
+    <div class="JieJueList">
+      <ul>
+        <li> <a href="">
+          <div class="JieJueImg"><img src="imgs/prod/r1.jpg" width="290" height="170"></div>
+          <div class="JieJueFont">
+            <h2>荣誉资质</h2>
+            荣誉证书是指记录获得的嘉奖荣誉、作为奖励的证明证件。它的外形各种各样，由使用单位自行决定采用哪种，且不同的单位使用的格式不同。</div>
+          </a> </li>
+        <li> <a href="">
+          <div class="JieJueImg"><img src="imgs/prod/r3.jpg" width="290" height="170"></div>
+          <div class="JieJueFont">
+            <h2>荣誉资质</h2>
+            荣誉证书是指记录获得的嘉奖荣誉、作为奖励的证明证件。它的外形各种各样，由使用单位自行决定采用哪种，且不同的单位使用的格式不同。</div>
+          </a> </li>
+        <li> <a href="">
+          <div class="JieJueImg"><img src="imgs/prod/r2.jpg" width="290" height="170"></div>
+          <div class="JieJueFont">
+            <h2>荣誉资质</h2>
+            荣誉证书是指记录获得的嘉奖荣誉、作为奖励的证明证件。它的外形各种各样，由使用单位自行决定采用哪种，且不同的单位使用的格式不同。 </div>
+          </a> </li>
+        <li> <a href="">
+          <div class="JieJueImg"><img src="imgs/prod/r4.jpg" width="290" height="170"></div>
+          <div class="JieJueFont">
+            <h2>荣誉资质</h2>
+            荣誉证书是指记录获得的嘉奖荣誉、作为奖励的证明证件。它的外形各种各样，由使用单位自行决定采用哪种，且不同的单位使用的格式不同。</div>
+          </a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+</body>
+
+</html>
